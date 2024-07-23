@@ -1,3 +1,64 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --bright-orange: #ff4d00;
+  --mid-orange: #ff993b;
+  --gray: #eeebe7;
+  --black: #121212;
+  --cobalt: #346dee;
+  --mint: #c8fde5;
+  --button-large-padding: 12px, 24px;
+  --button-small-padding: 8px, 20px, 8px, 20px;
+}
+
+body {
+  margin: 0;
+  line-height: inherit;
+}
+
+button {
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 64px;
+  line-height: 64px;
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 48px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 31.2px;
+}
+
+.d-body {
+  font-size: 18px;
+  line-height: 25.2px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 640px) {
+  h1 {
+    font-size: 48px;
+    line-height: 52.8px;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 35.2px;
+  }
+}
