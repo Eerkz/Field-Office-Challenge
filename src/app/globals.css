@@ -3,19 +3,17 @@
 @tailwind utilities;
 
 :root {
-  --bright-orange: #ff4d00;
-  --mid-orange: #ff993b;
-  --gray: #eeebe7;
-  --black: #121212;
-  --cobalt: #346dee;
-  --mint: #c8fde5;
-  --button-large-padding: 12px, 24px;
-  --button-small-padding: 8px, 20px, 8px, 20px;
+  --fo-bright-orange: #ff4d00;
+  --fo-mid-orange: #ff993b;
+  --fo-gray: #eeebe7;
+  --fo-black: #121212;
+  --fo-cobalt: #346dee;
+  --fo-mint: #c8fde5;
+  --fo-blue: #177EE5;
 }
 
 body {
   margin: 0;
-  line-height: inherit;
 }
 
 button {
@@ -45,10 +43,60 @@ h3 {
   line-height: 31.2px;
 }
 
-.d-body {
+.fo-d-body {
   font-size: 18px;
   line-height: 25.2px;
   font-weight: 400;
+}
+
+.fo-button-lg {
+  padding: 12px 24px;
+}
+
+.fo-button-sm {
+  padding: 8px 20px 8px 20px;
+}
+
+.fo-button-primary {
+  background: var(--fo-black);
+}
+
+@keyframes video-hero-ripple-inner {
+  0%,
+  30% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes video-hero-ripple-outer {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+
+  80%,
+  to {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes video-hero-pulse {
+  0%,
+  10%,
+  to {
+    transform: scale(0.95);
+  }
+
+  30% {
+    transform: scale(1);
+  }
 }
 
 @media screen and (max-width: 640px) {
