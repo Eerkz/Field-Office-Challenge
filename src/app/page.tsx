@@ -25,23 +25,23 @@ export default function Home() {
           <button className="bg-fo-black fo-button-lg mt-4 text-white border-fo-black border-[1px] border-solid fo-button-primary hover:border-[#505967]">
             Book a demo
           </button>
-          <div className="flex justify-center w-full">
+
+          <div className="flex justify-center w-full relative">
             <div className="relative sm:aspect-[1.87] aspect-[1.3149] sm:w-[82.5%] w-full mt-[80px] flex justify-center items-center">
+              <div className="absolute z-[-1] top-[-105px] w-screen h-[105%] sm:block hidden">
+                <div className="w-full h-[125%] dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-[#E7E5E4]/[0.65]"></div>
+              </div>
               <Image
                 src="/thumbnail.png"
                 fill={true}
                 alt="app screen"
-                style={{
-                  filter:
-                    "drop-shadow(0 20px 24px rgb(0 0 0 / 0.08)) drop-shadow(0 8px 8px rgb(0 0 0 / 0.03))",
-                }}
-                className="sm:block hidden border-[1px] rounded-[26.64px] border-[#E0E0E0]"
+                className="sm:block hidden border-[1px] rounded-[26.64px] border-[#E0E0E0] [filter:drop-shadow(0_20px_24px_rgb(0_0_0/0.08))_drop-shadow(0_8px_8px_rgb(0_0_0/0.03))]"
               />
               <Image
                 src="/thumbnail_mobile.png"
                 fill={true}
                 alt="app screen mobile"
-                className="sm:hidden block drop-shadow-[0_9.77px_19.54px_rgba(0,0,0,0.18)]"
+                className="sm:hidden block [filter:drop-shadow(0_9.77px_19.54px_rgb(0_0_0/0.18))]"
               />
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:-translate-y-[65%] lg:scale-[1.2]">
                 <div className="absolute inset-0 animate-[video-hero-ripple-outer_4s_ease-out_infinite] rounded-full border border-white-100 bg-[radial-gradient(#266df0_27.08%,#266df0_100%)]"></div>
