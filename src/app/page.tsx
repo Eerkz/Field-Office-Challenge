@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Grid from "@/components/ui/Grid";
 import Image from "next/image";
+import AnimatedShinyText from "@/components/ui/AnimatedShinyText";
 
 const commonInitial = { opacity: 0, transform: "translateY(-1.5rem)" };
 const commonAnimate = { opacity: 1, transform: "translateY(0)" };
@@ -42,14 +43,14 @@ export default function Home() {
             initial={joinUsAnimation.initial}
             animate={joinUsAnimation.animate}
             transition={joinUsAnimation.transition}
-            className="flex items-center gap-[12px] font-medium p-[4px_8px_4px_4px] text-sm text-secondary bg-[#EEEEEE] rounded-[8px] hover:cursor-pointer border border-[#6B9FFF] border-opacity-0 hover:border-opacity-100 active:border-opacity-100 outline-none ring-0 ring-[#6B9FFF] hover:ring-[3px] focus:ring-[3px] active:ring-[1px] ring-opacity-0 hover:ring-opacity-30 focus:ring-opacity-30 active:ring-opacity-30 transition-all duration-500 ease-out"
+            className="flex items-center gap-[12px] font-medium p-[4px_8px_4px_4px] text-secondary bg-[#EEEEEE] rounded-[8px] hover:cursor-pointer border border-[#6B9FFF] border-opacity-0 hover:border-opacity-100 active:border-opacity-100 outline-none ring-0 ring-[#6B9FFF] hover:ring-[3px] focus:ring-[3px] active:ring-[1px] ring-opacity-0 hover:ring-opacity-30 focus:ring-opacity-30 active:ring-opacity-30 transition-all duration-500 ease-out"
           >
             <span className="p-[2px_10px] align-middle bg-white rounded-[8px] text-fo-blue border-fo-blue border-[1px] text-sm">
               Join us
             </span>
-            <div className="flex items-center gap-[4px]">
+            <AnimatedShinyText className="flex items-center gap-[4px] text-sm">
               <span>✨</span> Come join us at Convention
-            </div>
+            </AnimatedShinyText>
           </motion.div>
           <div className="my-6 text-center">
             <motion.h1
