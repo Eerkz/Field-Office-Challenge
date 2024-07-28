@@ -4,32 +4,32 @@ import { motion } from "framer-motion";
 import Grid from "@/components/ui/Grid";
 import Image from "next/image";
 
-const commonInitial = { opacity: 0, transform: "translateY(-25px)" };
+const commonInitial = { opacity: 0, transform: "translateY(-1.5rem)" };
 const commonAnimate = { opacity: 1, transform: "translateY(0)" };
 const commonTransition = { ease: "ease" };
 
 const joinUsAnimation = {
   initial: { opacity: 0 },
   animate: { opacity: 1 },
-  transition: { ...commonTransition, delay: 1.2, duration: 1 },
+  transition: { ...commonTransition, delay: 1, duration: 1 },
 };
 
 const h1Animation = {
   initial: commonInitial,
   animate: commonAnimate,
-  transition: { ...commonTransition, delay: 0, duration: 0.6 },
+  transition: { ...commonTransition, delay: 0, duration: 0.7 },
 };
 
 const pAnimation = {
   initial: commonInitial,
   animate: commonAnimate,
-  transition: { ...commonTransition, delay: 0.3, duration: 0.8 },
+  transition: { ...commonTransition, delay: 0.3, duration: 0.7 },
 };
 
 const buttonAnimation = {
   initial: commonInitial,
   animate: commonAnimate,
-  transition: { ...commonTransition, delay: 0.7, duration: 0.9 },
+  transition: { ...commonTransition, delay: 0.7, duration: 0.7 },
 };
 
 export default function Home() {

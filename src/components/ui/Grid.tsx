@@ -53,7 +53,7 @@ export default function Grid({
         variants={lineVariants}
         initial="hidden"
         animate="visible"
-        transition={{ duration: 1.3, delay: 0.4 }}
+        transition={{ duration: 1.5 }}
       />
     );
   }
@@ -71,7 +71,7 @@ export default function Grid({
         variants={lineVariants}
         initial="hidden"
         animate="visible"
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 1.5 }}
       />
     );
   }
