@@ -57,7 +57,7 @@ export default function Home() {
               initial={h1Animation.initial}
               animate={h1Animation.animate}
               transition={h1Animation.transition}
-              className="[font-kerning:none]"
+              className="[font-kerning:none] transition-all duration-700"
             >
               The ultimate influencer <br /> discovery platform.
             </motion.h1>
