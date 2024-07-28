@@ -1,6 +1,7 @@
-"use client"
+"use client";
 
 import { motion } from "framer-motion";
+import Grid from "@/components/ui/Grid";
 import Image from "next/image";
 
 const commonInitial = { opacity: 0, transform: "translateY(-25px)" };
@@ -35,7 +36,7 @@ export default function Home() {
   return (
     <>
       <header className="ease-in-out sticky top-0 z-10 dark:bg-secondary min-[993px]:h-[71px] h-[64px]"></header>
-      <main className="w-full flex items-center justify-center text-fo-black min-[425px]:px-16 px-4 pb-[96px]">
+      <main className="w-full flex items-center justify-center text-fo-black min-[425px]:px-16 px-4">
         <section className="container flex flex-col items-center pt-10 lg:pt-40">
           <motion.div
             initial={joinUsAnimation.initial}
@@ -77,11 +78,13 @@ export default function Home() {
             Book a demo
           </motion.button>
 
-          <div className="flex justify-center w-full relative">
+          <div className="flex justify-center w-full relative pb-[96px]">
+            <div className="absolute z-[-1] top-[-25px] w-screen h-full sm:block hidden">
+              <Grid color="#E7E5E4" squareHeight={37} squareWidth={32} />
+              {/* using aceternity package */}
+              {/* <div className="w-full h-[125%] dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-[#E7E5E4]/[0.65]"></div> */}
+            </div>
             <div className="relative sm:aspect-[1.87] aspect-[1.3149] sm:w-[82.5%] w-full mt-[80px] flex justify-center items-center">
-              <div className="absolute z-[-1] top-[-105px] w-screen h-[105%] sm:block hidden">
-                <div className="w-full h-[125%] dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-[#E7E5E4]/[0.65]"></div>
-              </div>
               <Image
                 src="/thumbnail.png"
                 fill={true}
