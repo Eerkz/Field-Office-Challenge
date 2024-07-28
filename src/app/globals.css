@@ -9,7 +9,7 @@
   --fo-black: #121212;
   --fo-cobalt: #346dee;
   --fo-mint: #c8fde5;
-  --fo-blue: #177EE5;
+  --fo-blue: #177ee5;
 }
 
 body {
@@ -49,6 +49,7 @@ h3 {
   font-weight: 400;
 }
 
+
 .fo-button-lg {
   padding: 12px 24px;
 }
@@ -57,9 +58,34 @@ h3 {
   padding: 8px 20px 8px 20px;
 }
 
-.fo-button-primary {
-  background: var(--fo-black);
+@property --button-primary-gradient-from-hover {
+  syntax: "<color>";
+  initial-value: #121212;
+  inherits: false;
 }
+
+@property --button-primary-gradient-to-hover {
+  syntax: "<color>";
+  initial-value: #121212;
+  inherits: false;
+}
+
+.fo-button-primary {
+  background: linear-gradient(
+    var(--button-primary-gradient-from-hover),
+    var(--button-primary-gradient-to-hover)
+  );
+  transition: color 0.15s ease-in-out, border-color 0.15s ease-in-out, 
+              box-shadow 0.15s ease-in-out, 
+              --button-primary-gradient-from-hover 0.15s ease-in-out, 
+              --button-primary-gradient-to-hover 0.15s ease-in-out;
+}
+
+.fo-button-primary:hover {
+  --button-primary-gradient-from-hover: #505967;
+  --button-primary-gradient-to-hover: #202124;
+}
+
 
 @keyframes video-hero-ripple-inner {
   0%,
